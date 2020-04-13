@@ -279,22 +279,22 @@ export class DragFlowComponent implements OnInit {
     return {
       id: `graphic_drag_${item.id}`,
       // 矩形
-      type: 'rect',
+      type: 'image',
+      cursor: 'pointer',
       // 将坐标转化为像素
       position: this.myChart.convertToPixel('grid', item.value),
       shape: {
         // 拖动点的大小
-        x: -1 * (this.symbolSize[0] / 2),
-        y: 0,
-        width: this.symbolSize[0] / 2,
-        height: this.symbolSize[1] / 2
+        width: 20,
+        height: 20
       },
       style: {
-        fill: '#3FA7DC50',
-        lineWidth: 2,
-        borderColor: '#22faf7',
-        borderWidth: 1,
-      },
+        image: 'https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1586771783504&di=9f015cdfb07f3e567e9619ed60c2f1fd&imgtype=0&src=http%3A%2F%2Fwww.51yuansu.com%2Fpic2%2Fcover%2F00%2F49%2F95%2F581639aa3dcaf_610.jpg',
+        width: 20,
+        height: 20,
+        x: -50,
+        y: 0,
+              },
 
       // 指定虚拟圈是否可见  false 可见
       invisible: false,
